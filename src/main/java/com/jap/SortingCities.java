@@ -56,5 +56,15 @@ public class SortingCities {
         return citiesNames;
     }
 
+    /**
+     * This function takes a string and returns a string.
+     *
+     * @param citiesNames This is the parameter that is passed to the method.
+     * @return The citiesNames is being returned in upper case.
+     */
+    public String toUpperCase(String citiesNames) {
+        return citiesNames.toUpperCase();
+    }
+
 
 }
