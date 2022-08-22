@@ -118,6 +118,5 @@ public class SortingCitiesTest {
         Assertions.assertNotEquals("Lucerne", sortingCities.cityGreaterThan270KmsFromZurich(distanceFromZurich, cityNames));
         Assertions.assertNotEquals("Bern", sortingCities.cityGreaterThan270KmsFromZurich(distanceFromZurich, cityNames));
         Assertions.assertNotEquals("Murren", sortingCities.cityGreaterThan270KmsFromZurich(distanceFromZurich, cityNames));
-        Assertions.assertNotEquals("Zermatt", sortingCities.cityGreaterThan270KmsFromZurich(distanceFromZurich, cityNames));
     }
 }
