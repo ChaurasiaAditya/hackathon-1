@@ -7,14 +7,14 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 
-public class SortingCitiesTest {
-    SortingCities sortingCities;
+public class SwitzerlandTravellerTest {
+    SwitzerlandTraveller sortingCities;
     int[] distanceFromZurich;
     String[] cityNames;
 
     @BeforeEach
     public void setUp() {
-        sortingCities = new SortingCities();
+        sortingCities = new SwitzerlandTraveller();
         distanceFromZurich = new int[]{138, 52, 118, 136, 85, 276, 103, 87, 214, 101};
         cityNames = new String[]{"Bern", "Lucerne", "Interlaken", "Grindelwald", "Engelberg", "Geneva", "Murren", "Basel", "Zermatt", "Jungfraujoch"};
     }
