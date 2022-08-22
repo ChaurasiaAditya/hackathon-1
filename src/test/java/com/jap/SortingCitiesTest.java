@@ -64,4 +64,20 @@ public class SortingCitiesTest {
         Assertions.assertEquals(expectedOrder[7], sortingCities.arrangedDistances(distanceFromZurich)[7]);
 
     }
+
+    @Test
+    void givenIntegerArrayCheckInAscendingOrderFailure() {
+        // act
+        int[] expectedOrder = {52, 85, 87, 101, 103, 118, 136, 138, 214, 276};
+        // Assert
+        Assertions.assertNotEquals(expectedOrder[0], sortingCities.arrangedDistances(distanceFromZurich)[1]);
+        Assertions.assertNotEquals(expectedOrder[0], sortingCities.arrangedDistances(distanceFromZurich)[2]);
+        Assertions.assertNotEquals(expectedOrder[1], sortingCities.arrangedDistances(distanceFromZurich)[5]);
+        Assertions.assertNotEquals(expectedOrder[1], sortingCities.arrangedDistances(distanceFromZurich)[4]);
+        Assertions.assertNotEquals(expectedOrder[2], sortingCities.arrangedDistances(distanceFromZurich)[6]);
+        Assertions.assertNotEquals(expectedOrder[2], sortingCities.arrangedDistances(distanceFromZurich)[3]);
+        Assertions.assertNotEquals(expectedOrder[0], sortingCities.arrangedDistances(distanceFromZurich)[4]);
+        Assertions.assertNotEquals(expectedOrder[0], sortingCities.arrangedDistances(distanceFromZurich)[3]);
+    }
+
 }
