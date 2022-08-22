@@ -108,4 +108,8 @@ public class SortingCitiesTest {
         Assertions.assertNotEquals("Murren", sortingCities.cityAt52KmsFromZurich(distanceFromZurich, cityNames));
     }
 
+    @Test
+    public void cityGreaterThan270KmsFromZurichSuccess() {
+        Assertions.assertEquals("Geneva", sortingCities.cityGreaterThan270KmsFromZurich(distanceFromZurich, cityNames));
+    }
 }
