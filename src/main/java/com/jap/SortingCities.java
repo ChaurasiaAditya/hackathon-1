@@ -83,5 +83,15 @@ public class SortingCities {
         return city52KmsFromZurich;
     }
 
+    public String cityGreaterThan270KmsFromZurich(int[] distance, String[] nameOfCities) {
+        String cityGreaterThan270Kms = null;
+        for (int index = 0; index < nameOfCities.length; index++) {
+            if (distance[index] >= 270) {
+                cityGreaterThan270Kms = nameOfCities[index];
+            }
+        }
+        return cityGreaterThan270Kms;
+    }
+
 
 }
