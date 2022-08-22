@@ -43,7 +43,7 @@ public class SwitzerlandTraveller {
         // Loop to iterate every city Names in Array
         for (int pass = 0; pass < citiesNames.length; pass++) {
             for (int index = 0; index < citiesNames.length - 1; index++) {
-                if (citiesNames[index].charAt(0) > citiesNames[index + 1].charAt(0)) {
+                if (citiesNames[index].compareTo(citiesNames[index+1]) > 0) {
 
                     // Swap the City Names in Alphabetic Order
                     String temporaryName = citiesNames[index];

@@ -26,7 +26,7 @@ public class SwitzerlandTravellerTest {
     @Test
     public void checkArrangeCitiesInAlphabeticOrderSuccess() {
         // act
-        String[] expected = {"Bern", "Basel", "Engelberg", "Grindelwald", "Geneva", "Interlaken", "Jungfraujoch", "Lucerne", "Murren", "Zermatt"};
+        String[] expected = {"Basel","Bern", "Engelberg", "Geneva","Grindelwald",  "Interlaken", "Jungfraujoch", "Lucerne", "Murren", "Zermatt"};
         // Assert
         Assertions.assertEquals(expected[0], sortingCities.arrangedCities(cityNames)[0]);
         Assertions.assertEquals(expected[1], sortingCities.arrangedCities(cityNames)[1]);
@@ -39,7 +39,7 @@ public class SwitzerlandTravellerTest {
     @Test
     public void checkArrangeCitiesInAlphabeticOrderFailure() {
         // act
-        String[] expected = {"Bern", "Basel", "Engelberg", "Grindelwald", "Geneva", "Interlaken", "Jungfraujoch", "Lucerne", "Murren", "Zermatt"};
+        String[] expected = {"Basel","Bern", "Engelberg", "Geneva","Grindelwald",  "Interlaken", "Jungfraujoch", "Lucerne", "Murren", "Zermatt"};
         // Assert
         Assertions.assertNotEquals(expected[0], sortingCities.arrangedCities(cityNames)[1]);
         Assertions.assertNotEquals(expected[0], sortingCities.arrangedCities(cityNames)[2]);
