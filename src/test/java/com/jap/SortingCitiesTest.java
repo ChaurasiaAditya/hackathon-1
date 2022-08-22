@@ -24,7 +24,7 @@ public class SortingCitiesTest {
     }
 
     @Test
-    void checkArrangeCitiesInAlphabeticOrderSuccess() {
+    public void checkArrangeCitiesInAlphabeticOrderSuccess() {
         // act
         String[] expected = {"Bern", "Basel", "Engelberg", "Grindelwald", "Geneva", "Interlaken", "Jungfraujoch", "Lucerne", "Murren", "Zermatt"};
         // Assert
@@ -37,7 +37,7 @@ public class SortingCitiesTest {
     }
 
     @Test
-    void checkArrangeCitiesInAlphabeticOrderFailure() {
+    public void checkArrangeCitiesInAlphabeticOrderFailure() {
         // act
         String[] expected = {"Bern", "Basel", "Engelberg", "Grindelwald", "Geneva", "Interlaken", "Jungfraujoch", "Lucerne", "Murren", "Zermatt"};
         // Assert
@@ -50,7 +50,7 @@ public class SortingCitiesTest {
     }
 
     @Test
-    void givenIntegerArrayCheckInAscendingOrderSuccess() {
+    public void givenIntegerArrayCheckInAscendingOrderSuccess() {
         // act
         int[] expectedOrder = {52, 85, 87, 101, 103, 118, 136, 138, 214, 276};
         // Assert
@@ -66,7 +66,7 @@ public class SortingCitiesTest {
     }
 
     @Test
-    void givenIntegerArrayCheckInAscendingOrderFailure() {
+    public void givenIntegerArrayCheckInAscendingOrderFailure() {
         // act
         int[] expectedOrder = {52, 85, 87, 101, 103, 118, 136, 138, 214, 276};
         // Assert
@@ -82,7 +82,7 @@ public class SortingCitiesTest {
 
 
     @Test
-    void givenStringNameConvertToUpperCaseSuccess() {
+    public void givenStringNameConvertToUpperCaseSuccess() {
         Assertions.assertEquals("BERN", sortingCities.toUpperCase(cityNames[0]));
         Assertions.assertEquals("LUCERNE", sortingCities.toUpperCase(cityNames[1]));
         Assertions.assertEquals("GENEVA", sortingCities.toUpperCase(cityNames[5]));
@@ -111,5 +111,13 @@ public class SortingCitiesTest {
     @Test
     public void cityGreaterThan270KmsFromZurichSuccess() {
         Assertions.assertEquals("Geneva", sortingCities.cityGreaterThan270KmsFromZurich(distanceFromZurich, cityNames));
+    }
+
+    @Test
+    public void cityGreaterThan270KmsFromZurichFailure() {
+        Assertions.assertNotEquals("Lucerne", sortingCities.cityGreaterThan270KmsFromZurich(distanceFromZurich, cityNames));
+        Assertions.assertNotEquals("Bern", sortingCities.cityGreaterThan270KmsFromZurich(distanceFromZurich, cityNames));
+        Assertions.assertNotEquals("Murren", sortingCities.cityGreaterThan270KmsFromZurich(distanceFromZurich, cityNames));
+        Assertions.assertNotEquals("Zermatt", sortingCities.cityGreaterThan270KmsFromZurich(distanceFromZurich, cityNames));
     }
 }
