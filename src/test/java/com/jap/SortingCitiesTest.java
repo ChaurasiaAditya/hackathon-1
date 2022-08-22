@@ -5,13 +5,15 @@ import org.junit.jupiter.api.BeforeEach;
 
 
 public class SortingCitiesTest {
+    SortingCities sortingCities;
 
     @BeforeEach
-    public void setUp()  {
+    public void setUp() {
+        sortingCities = new SortingCities();
     }
 
     @AfterEach
-    public void tearDown()  {
+    public void tearDown() {
     }
 
     //write all the test cases here
