@@ -87,4 +87,12 @@ public class SortingCitiesTest {
         Assertions.assertEquals("LUCERNE", sortingCities.toUpperCase(cityNames[1]));
         Assertions.assertEquals("GENEVA", sortingCities.toUpperCase(cityNames[5]));
     }
+
+    @Test
+    public void givenStringNameConvertToUpperCaseFailure() {
+        Assertions.assertNotEquals("Bern", sortingCities.toUpperCase(cityNames[0]));
+        Assertions.assertNotEquals("Lucerne", sortingCities.toUpperCase(cityNames[1]));
+        Assertions.assertNotEquals("Geneva", sortingCities.toUpperCase(cityNames[5]));
+        Assertions.assertNotEquals("Murren", sortingCities.toUpperCase(cityNames[3]));
+    }
 }
