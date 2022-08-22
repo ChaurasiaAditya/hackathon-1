@@ -8,6 +8,7 @@ public class SortingCities {
         System.out.println("Hello World!");
     }
 
+
     /**
      * The function takes an array of integers as an argument and returns the same array with the integers sorted in
      * ascending order
@@ -83,6 +84,13 @@ public class SortingCities {
         return city52KmsFromZurich;
     }
 
+    /**
+     * Find the first city that is greater than 270 km from Zurich.
+     *
+     * @param distance an array of integers, each representing the distance of a city from Zurich
+     * @param nameOfCities An array of Strings, each String representing the name of a city.
+     * @return The name of the city that is greater than 270 kms from Zurich.
+     */
     public String cityGreaterThan270KmsFromZurich(int[] distance, String[] nameOfCities) {
         String cityGreaterThan270Kms = null;
         for (int index = 0; index < nameOfCities.length; index++) {
@@ -92,6 +100,4 @@ public class SortingCities {
         }
         return cityGreaterThan270Kms;
     }
-
-
 }
