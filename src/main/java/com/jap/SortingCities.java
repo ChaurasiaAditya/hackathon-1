@@ -66,5 +66,22 @@ public class SortingCities {
         return citiesNames.toUpperCase();
     }
 
+    /**
+     * Find the name of the city that is 52 km from Zurich.
+     *
+     * @param distance     an array of integers, each representing the distance of a city from Zurich
+     * @param nameOfCities An array of Strings, each String is the name of a city.
+     * @return The name of the city that is 52 kms from Zurich.
+     */
+    public String cityAt52KmsFromZurich(int[] distance, String[] nameOfCities) {
+        String city52KmsFromZurich = null;
+        for (int index = 0; index < distance.length; index++) {
+            if (distance[index] == 52) {
+                city52KmsFromZurich = nameOfCities[index];
+            }
+        }
+        return city52KmsFromZurich;
+    }
+
 
 }
