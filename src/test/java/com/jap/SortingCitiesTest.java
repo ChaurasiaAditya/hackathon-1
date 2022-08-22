@@ -95,4 +95,10 @@ public class SortingCitiesTest {
         Assertions.assertNotEquals("Geneva", sortingCities.toUpperCase(cityNames[5]));
         Assertions.assertNotEquals("Murren", sortingCities.toUpperCase(cityNames[3]));
     }
+
+    @Test
+    public void findCityWhichIs52KmsFromZurichSuccess() {
+        Assertions.assertEquals("Lucerne", sortingCities.cityAt52KmsFromZurich(distanceFromZurich, cityNames));
+    }
+
 }
